@@ -1,10 +1,12 @@
 require_relative "./kele/version"
 require_relative "./kele/errors"
+require_relative './kele/roadmap'
 require 'httparty'
 require 'json'
 
 class Kele
    include HTTParty
+   include Roadmap
    base_uri 'https://www.bloc.io/api/v1'
 
   def initialize(email, password)
